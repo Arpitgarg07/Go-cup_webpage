@@ -1,0 +1,294 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+.page1 {
+    background-color: #ff9500;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+nav {
+    background-color: #ffffff;
+    padding: 1vw 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+nav img {
+    height: 48px;
+    padding: 0 1.8vw;
+}
+
+.nav-elements {
+    display: flex;
+    align-items: center;
+}
+.nav-elements .txt-nav {
+    padding: 0 1.8vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.but-get {
+    background-color: #1F2122;
+    color: #ffffff;
+    padding: 9px 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    align-self: center;
+}
+.nav-elements .but-get h4 {
+    color: rgba(255, 255, 255, 0.951);
+    font-weight: 500;
+}
+
+.nav-elements h4 {
+    color: #1f212200;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-link {
+    position: relative;
+}
+  
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0%; 
+    height: 3px;
+    background-color: #1F2122;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.3s; 
+}
+  
+.nav-link:hover::after {
+    width: 100%;
+}
+.txt-nav h4 a:hover {
+    color: #1F2122;
+    font-weight: 550;
+}
+
+.txt-nav h4 a {
+    color: #1f2122cf;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+
+
+/* nav closed */
+.mid {
+    height: 90vh;
+    width: 100%;
+    background-color: #fff9f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.mid1 {
+    max-width: 50%;
+    padding-left: 5vw;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1F2122;
+    line-height: 1.2;
+}
+.mid1 button {
+    padding: 14px 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    color: #ffffff;
+    background-color: #1F2122;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+  
+.mid1 button:hover {
+    transition: 0.4s;
+    background-color: #1F2122;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #1f2122b7 0px 7px 29px 0px;
+}
+
+.mid2 {
+    max-width: 50%;
+    overflow: hidden;
+}
+.mid2 img {
+    margin-top: 150px;
+    margin-right: 20px;
+    padding: 80 230;
+    width: 750px;
+}
+
+  
+@media (max-width: 680px) {
+    .nav-elements{
+        display: none;
+    }
+
+    .mid {
+        padding: 80px 0 0 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;   
+    }
+
+    .mid1 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .mid2 {
+        max-width: 100%;
+        height: 100%;
+        padding: 0;
+        margin-top: 30px;
+    }
+}
+    
+@media (min-width: 680px) {
+    .menu-nav{
+        display: none;
+    }
+}
+
+/* mid complete */
+
+.middle {
+    min-height: 10vw;
+    background-color: #1e2021;
+    position: relative;
+    z-index: 10;
+}
+
+.middle1 {
+    padding: 50px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+nav img {
+    padding-top: -80vh;
+    height: 10%;
+    width: 5%;
+}
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    background-color: #1F2122;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+.nav-ele {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.nav-ele h4 {
+    padding: 10px 18px;
+    font-weight: 700;
+    color: #ffffffbb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 16px;
+    overflow: hidden;
+}
+.nav-ele h4::after {
+    content: "";
+    position: absolute;
+    height: 7%;
+    width: 100%;
+    background-color: black;
+    left: 0%;
+    bottom: -80%;
+    transition: ease-in-out 0.4s;
+}
+
+.nav-ele h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-ele h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+.nav-ele h4:hover a {
+    color: #fff;
+} */
