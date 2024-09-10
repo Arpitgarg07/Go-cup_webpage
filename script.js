@@ -7,3 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
     iframe.style.border = "0";
     container.appendChild(iframe);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var container = document.getElementById("slideshow-middle");
+    var iframe = document.createElement('iframe');
+    iframe.src = "slideshow-aboutus/index.html";
+    iframe.style.width = "100%";
+    iframe.style.height = "100vh";
+    iframe.style.border = "0";
+    container.appendChild(iframe);
+});

@@ -5,14 +5,12 @@
 }
 
 html, body {
-  width: 100%;
-  height: 100vh;
   overflow: hidden; 
-  background: #22222A;
-  font-family: 'Fira Mono', monospace;
+  background: #ffffff;
+  font-family: "Lexend", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: .88rem;
-  color: #bdbdd5;
+  color: #000000;
 }
 
 .content-width {
@@ -54,7 +52,6 @@ html, body {
   left: 0;
   width: 101%;
   height: 101%;
-  background: #22222A;
   opacity: 0;
   z-index: 1;
 }
@@ -83,7 +80,8 @@ html, body {
   right: 0;
   width: 50%;
   padding-right: 4%;
-  line-height: 1.8;
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 /* Staggered Vertical Items ------------------------------------------------------*/
@@ -96,10 +94,12 @@ html, body {
 
 .item-header .vertical-part {
   margin: 0 -4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'lexend', sans-serif;
+  font-weight: 1100;
+
   -webkit-font-smoothing: auto;
-  font-size: 7vw;
-  color: #fff;
+  font-size: 6vw;
+  color: #000000;
 }
 
 .vertical-part {
@@ -108,8 +108,10 @@ html, body {
 }
 
 .vertical-part b {
+
   display: inline-block;
   transform: translateY(100%);
+  
 }
 
 .item-header .vertical-part b {
