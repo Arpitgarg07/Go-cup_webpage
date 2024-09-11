@@ -13,10 +13,6 @@
 
 </head>
 <body>
-    <div id="loader-container">
-        <!-- Load the preloader HTML content dynamically -->
-    </div>
-
     <div id="content" style="display: none;"></div>
     <div id="main">
         <div class="page1">
@@ -116,24 +112,5 @@
     </div>
 </div>
     <script src="script.js"></script>
-    <script src="preloader/loader.js"></script>
-    <script>
-        // Load preloader HTML into the container
-        fetch('preloader/preloader.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('loader-container').innerHTML = data;
-                document.getElementById('content').style.display = "block";
-            });
-
-        // Hide the loader after a certain period
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader-container').style.display = "none";
-                document.getElementById('content').style.display = "block";
-            }, 3000); // Adjust the delay time if needed
-        });
-    </script>
-
 </body>
 </html>
