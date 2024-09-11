@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoCup</title><link rel="icon" type="image/x-icon" href="/images/favicon_io_1/favicon-32x32.png">
-
+    <link rel="stylesheet" href="preloader/loader.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,11 @@
 
 </head>
 <body>
+    <div id="loader-container">
+        <!-- Load the preloader HTML content dynamically -->
+    </div>
+
+    <div id="content" style="display: none;"></div>
     <div id="main">
         <div class="page1">
             <div class="nav-parent">
@@ -109,6 +114,24 @@
                 </div>
         </div>
     </div>
+</div>
     <script src="script.js"></script>
+    <script src="preloader/loader.js"></script>
+    <script>
+        // Load preloader HTML into the container
+        fetch('preloader/preloader.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('loader-container').innerHTML = data;
+                document.getElementById('content').style.display = "block";
+            });
+
+        // Hide the loader after a certain period
+        setTimeout(function () {
+            document.getElementById('loader-container').style.display = "none";
+            document.getElementById('content').style.display = "block";
+        }, 3000); // Adjust the delay time if needed
+    </script>
+
 </body>
 </html>
