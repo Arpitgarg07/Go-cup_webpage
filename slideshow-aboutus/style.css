@@ -6,8 +6,9 @@
 
 html, body {
   overflow: hidden; 
+  min-height: 100vh; /* Set to min-height instead of height */
   background: #ffffff;
-  font-family: "Lexend", sans-serif;
+  font-family: "Lexend", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   font-size: .88rem;
   color: #000000;
@@ -15,14 +16,14 @@ html, body {
 
 .content-width {
   width: 86%;
-  height: 100vh;
+  min-height: 100vh; /* Use min-height to prevent extra space on zoom out */
   margin: 0 auto;
 }
 
 .slideshow {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto; /* Adjust height based on content */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -31,7 +32,7 @@ html, body {
 .slideshow-items {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 300px; /* Fixed height for slides */
 }
 
 .item {
@@ -62,7 +63,6 @@ html, body {
   height: auto;
   opacity: 0;
   display: block;
-  /* transition: property name | duration | timing-function | delay  */
   transition: opacity .3s ease-out .45s;
 }
 
@@ -80,11 +80,11 @@ html, body {
   right: 0;
   width: 50%;
   padding-right: 4%;
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 18px;
 }
 
-/* Staggered Vertical Items ------------------------------------------------------*/
+/* Staggered Vertical Items */
 .item-header {
   position: absolute;
   top: 150px;
@@ -96,9 +96,8 @@ html, body {
   margin: 0 -4px;
   font-family: 'lexend', sans-serif;
   font-weight: 1100;
-
   -webkit-font-smoothing: auto;
-  font-size: 6vw;
+  font-size: 5vw;
   color: #000000;
 }
 
@@ -108,10 +107,8 @@ html, body {
 }
 
 .vertical-part b {
-
   display: inline-block;
   transform: translateY(100%);
-  
 }
 
 .item-header .vertical-part b {
@@ -130,11 +127,13 @@ html, body {
   transform: translateY(0);
 }
 
-/* Controls ----------------------------------------------------------------------*/
+/* Controls */
 .controls {
   position: relative;
   text-align: right;
   z-index: 1000;
+  right: 102px;
+  top: 146px;
 }
 
 .controls ul {
@@ -145,11 +144,48 @@ html, body {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 3px;
+  margin: 0px;
   background:#bdbdd5;;
   cursor: pointer;
 }
 
 .controls ul li.active {
   background:#6a6a77;;
+}
+
+@media (max-width: 680px) {
+
+    .content-width {
+        width: 100%;
+        min-height: 100vh;
+        padding: 4vw;
+    }
+    .item-description {
+      top: 0px;
+    }
+
+  .item-header .vertical-part {
+      margin: 0 0px;
+    }
+
+    .item-header {
+      top: 15px;
+    }
+
+    .controls {
+      right: 360px;
+      top: -120px;
+    }
+
+    .controls ul li {
+      width: 8px;
+      height: 8px;
+    }
+
+    .controls ul li.active {
+      width: 8px;
+      height: 8px;
+    }
+
+
 }

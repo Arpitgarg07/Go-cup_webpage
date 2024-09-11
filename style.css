@@ -128,7 +128,7 @@ nav img {
 
 .middle-txt {
     display: flex;
-    padding-top: 4vw;
+    padding-top: 2vw;
     margin-bottom: -8px;
     justify-content: center; 
     text-align: center;
@@ -140,7 +140,7 @@ nav img {
 }
 .middle-txt-1 {
     display: flex;
-    padding-top: 4vw;
+    padding-top: 1vw;
     justify-content: center; 
     text-align: center;
     font-size: 2vw;
@@ -155,10 +155,15 @@ nav img {
     justify-content: center; 
     align-items: center; 
 }
+/* .middle iframe {
+    height: 100vh;
+} */
 
 .slideshow-mid {
-    width: 100vw; /* Adjust to your preferred width */
-    min-width: 100vh; /* Max width to prevent overly large slideshows */
+    padding: 5vw 0vw;
+    width: 100vw;
+    height: auto;
+    min-height: 500px;
     border: none;
 }
 
@@ -218,8 +223,78 @@ nav img {
     background-color: #f0c595;
 }
 
+.advertise {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    align-items: center;
+    height: 50%;
+}
+.ad1 {
+    width: 50%;
+    scale: 80%;
+}
+
+/* From Uiverse.io by suleymanlaarabidev */ 
+.card {
+    width: 190px;
+    height: 254px;
+    background: rgb(103, 225, 255);
+    transition: all 0.4s;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.1);
+    background: rgb(103, 151, 255);
+  }
+  
+  .first-content {
+    height: 50px;
+    width: 50px;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+  }
+  
+  
+  .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  .second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+  }
+  
+  .card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+  }
+
 /* Padding and margin adjustments for smaller screens */
 @media (max-width: 680px) {
+
     .nav-elements{
         display: none;
     }
@@ -230,7 +305,9 @@ nav img {
         align-items: center; 
     }
     
+
     .slideshow-mid {
+        padding-top: 20vw;
         border: none;
         position: relative;
         width: 100%;
@@ -240,17 +317,22 @@ nav img {
         align-items: center;
         min-width: 0vw;
     }
-}
-@media (max-width: 680px) {
+
     .middle-services-main {
         flex-direction: column; /* Stack icons vertically */
         margin-top: 2rem; /* Push the section down from the top */
         padding: 2vw 0;
     }
-    .middle-txt-1 {
-        margin-top: 25rem;
-        font-size: larger;
+    .middle-txt-1 h2 {
+        margin-top: 4rem;
+        font-size: 2.2rem;
     }
+
+    .middle-txt h1 {
+        font-size: 2.2rem;
+        padding-top: 4vw;
+    }
+
     .main1 {
         margin-bottom: 2rem; /* Add margin between the elements */
     }
@@ -264,8 +346,6 @@ nav img {
         font-size: 1rem; /* Adjust font size for better readability */
     }
 }
-
-
 @media (min-width: 680px) {
     .menu-nav{
         display: none;
