@@ -14,7 +14,7 @@ html, body {
 }
 
 #main {
-    background-color: #ff0000;
+    background-color: #ffffff;
     position: relative;
     z-index: 10;
     max-width: 1400px; 
@@ -162,6 +162,63 @@ nav img {
     border: none;
 }
 
+
+.middle-services-main {
+    display: flex;
+    justify-content: space-around; /* Distributes items with equal space around */
+    align-items: center; /* Vertically centers the icons */
+    padding: 4vw;
+    flex-wrap: wrap; /* Wraps elements if the screen is smaller */
+    flex-direction: row; /* Aligns items in a row */
+}
+
+.main1 {
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px; /* Ensures all elements have the same width */
+}
+
+.main-box {
+    height: 200px;
+    width: 200px;
+    border-radius: 40% 60% 65% 35% / 57% 46% 54% 43% ;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.main-box img {
+    width: 120px;
+}
+
+.main1-txt {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-align: center;
+}
+
+#main-co:hover {
+    background-color: #6fcaed !important;
+}
+
+.main1-txt p {
+    padding-top: 0.5vw;
+    width: 225px;
+    line-height: 20px;
+}
+
+/* Hover effect for icons */
+.main-box:hover {
+    background-color: #f0c595;
+}
+
+/* Padding and margin adjustments for smaller screens */
 @media (max-width: 680px) {
     .nav-elements{
         display: none;
@@ -184,7 +241,31 @@ nav img {
         min-width: 0vw;
     }
 }
+@media (max-width: 680px) {
+    .middle-services-main {
+        flex-direction: column; /* Stack icons vertically */
+        margin-top: 2rem; /* Push the section down from the top */
+        padding: 2vw 0;
+    }
+    .middle-txt-1 {
+        margin-top: 25rem;
+        font-size: larger;
+    }
+    .main1 {
+        margin-bottom: 2rem; /* Add margin between the elements */
+    }
     
+    .main-box {
+        width: 150px; /* Slightly reduce size to fit smaller screens */
+        height: 150px;
+    }
+    
+    .main1-txt {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+}
+
+
 @media (min-width: 680px) {
     .menu-nav{
         display: none;
