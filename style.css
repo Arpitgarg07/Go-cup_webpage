@@ -223,75 +223,296 @@ nav img {
     background-color: #f0c595;
 }
 
+.sizes-txt {
+    color: #494b4d;
+    font-size: 2em;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+}
+
 .advertise {
     width: 100%;
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    align-items: center;
     height: 50%;
 }
 .ad1 {
+    align-items: center;
     width: 50%;
     scale: 80%;
 }
 
-/* From Uiverse.io by suleymanlaarabidev */ 
-.card {
-    width: 190px;
-    height: 254px;
-    background: rgb(103, 225, 255);
-    transition: all 0.4s;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: 900;
-    overflow: hidden;
-  }
-  
-  .card:hover {
-    border-radius: 15px;
-    cursor: pointer;
-    transform: scale(1.1);
-    background: rgb(103, 151, 255);
-  }
-  
-  .first-content {
-    height: 50px;
-    width: 50px;
-    transition: all 0.4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    border-radius: 15px;
-  }
-  
-  
-  .card:hover .first-content {
-    height: 0px;
-    opacity: 0;
-  }
-  
-  .second-content {
-    height: 0%;
-    width: 100%;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    transition: all 0.4s;
-    font-size: 0px;
-    transform: rotate(90deg) scale(-1);
-  }
-  
-  .card:hover .second-content {
-    opacity: 1;
-    height: 100%;
-    font-size: 1.8rem;
-    transform: rotate(0deg);
-  }
+.ad2 {
+    width: 50%;
+}
 
+.sizes-main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 4em;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  overflow: hidden;
+}
+.flip-card-front img {
+    overflow: hidden;
+}
+
+.flip-img {
+    width: 250px !important;
+    height: 250px !important; 
+}
+.flip-img, .flip-card-front, .flip-card-inner, .flip-card-back, .flip-card {
+    border-radius: 5%;
+}
+
+.flip-card-back {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* This ensures the vertical stacking of h1 and p tags */
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+
+.footerbox {
+    background-color: #1e2021;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    
+}
+.foot-txt{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.foot-txt {
+    font-size: 1.3rem;
+    text-align: left;
+}
+.social {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 40px;
+    background-color: #fff;
+    height: 40px;
+} 
+.social-media {
+    top: 20%;
+    left: 0;
+}
+
+
+footer {
+    background-color: #1e2021;
+    padding: 20px 0 0 0;
+    text-align: center;
+    min-height: 30vh;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+}
+
+.footer-left h1 {
+    text-align: left;
+    font-size: 2.4rem;
+    color: #fff;
+    margin-top: 76px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 50px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* makes the icon white */
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-bottom ul {
+    list-style-type: none;
+    display: flex;
+}
+
+
+.footer-bottom ul li {
+    margin: 0 15px;
+}
+
+.footer-bottom ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+}
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
 /* Padding and margin adjustments for smaller screens */
 @media (max-width: 680px) {
 
@@ -345,9 +566,67 @@ nav img {
     .main1-txt {
         font-size: 1rem; /* Adjust font size for better readability */
     }
+
+    .advertise {
+        display: inline;
+    }
+    .ad1 {
+        width: 200%;
+        scale: 50%;
+        margin-left: -210px;
+        margin-top: -200px;
+        margin-bottom: -300px;
+    }
+    .ad2 {
+        padding-left: 50%;
+    }
+
+    .footer-container {
+        display: block;
+        text-align: center;
+        padding: 20px 4%;
+    }
+
+    .footer-left h1 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer-right p {
+        margin: 20px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+    }
+
+    .footer-bottom ul li {
+        margin: 10px 0;
+    }
+    
+    .wrapper .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .wrapper {
+        padding-top: 20px;
+    }
 }
 @media (min-width: 680px) {
     .menu-nav{
         display: none;
     }
 }
+
