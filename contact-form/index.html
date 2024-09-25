@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" alt="logo-company">
+        <div class="nav-elements">
+            <div class="txt-nav">
+                <h4><a class="nav-link" href="">Home</a></h4>
+                <h4><a class="nav-link" href="">About</a></h4>
+                <h4><a class="nav-link" href="">Services</a></h4>
+                <h4><a class="nav-link" href="index.html">Contact</a></h4>
+            </div>
+            <div class="but-get">
+                <h4>Get in Touch</h4>
+            </div>
+        </div>
+        <div class="menu-nav">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
+        
+    </nav>
+    <section style="padding-top: 100px;">
+        <div class="contact-txt">
+            <h1>Get in touch with us</h1>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="img/location.png" alt=""></span>
+                            <span>
+                                Sitapura, Jaipur, Rajasthan, 302022
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="img/mail.png" alt=""></span>
+                            <span>Everysip00@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><img src="img/call.png" alt=""></span>
+                            <span>8209132917, 6377181470</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="socialIcon">
+                    <li><a href="#"><img src="img/1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/2.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/3.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/5.png" alt=""></a></li>
+                </ul>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="contactForm">
+                <h2 style="text-align:center; font-size: 26px;"><b>Advertise your Brand with us</b></h2>
+                <div class="formBox">
+                    <input type="hidden" name="access_key" value="4b29952d-d10d-4311-966c-dfd9ff279a9c">
+                    <div class="inputBox w50">
+                        <input type="text" name="name" id="firstname" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="name" id="lastname" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" name="email" id="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="phone" id="phone" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="message" id="message" required></textarea>
+                        <span>Write Your Message Here.</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script >
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "webytube73@gmail.com",
+                Password : "4546D3C844C5818979CAB2BEEC0BD6FC8397",
+                To : 'arpitgarg5689@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Advertising inquiry",
+                Body : "First Name: " + document.getElementById("lirstname").value + "Last Name: " + document.getElementById("lastname").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message sent succesfully")
+            );
+        }
+    </script>
+</body>
+</html>
