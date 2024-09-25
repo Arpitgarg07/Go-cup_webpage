@@ -275,6 +275,8 @@ nav img {
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  scale: 120%;
+  transition: all ease-in-out 0.5s;
 }
 
 .flip-card-front, .flip-card-back {
@@ -580,6 +582,8 @@ footer {
     .ad2 {
         padding-left: 50%;
     }
+
+    
 
     .footer-container {
         display: block;
