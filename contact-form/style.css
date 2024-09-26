@@ -277,11 +277,256 @@ section {
     font-weight: 500;
 }
 
+
+.footerbox {
+    background-color: #1e2021;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    
+}
+.foot-txt{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.foot-txt {
+    font-size: 1.3rem;
+    text-align: left;
+}
+.social {
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 40px;
+    background-color: #fff;
+    height: 40px;
+} 
+.social-media {
+    top: 20%;
+    left: 0;
+}
+
+
+footer {
+    background-color: #1e2021;
+    padding: 20px 0 0 0;
+    text-align: center;
+    min-height: 30vh;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+}
+
+.footer-left h1 {
+    text-align: left;
+    font-size: 2.4rem;
+    color: #fff;
+    margin-top: 76px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin: 50px 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* makes the icon white */
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding: 20px 8% 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-bottom ul {
+    list-style-type: none;
+    display: flex;
+}
+
+
+.footer-bottom ul li {
+    margin: 0 15px;
+}
+
+.footer-bottom ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
+
 @media (max-width: 680px) {
 
     .nav-elements{
         display: none;
     }
+
+    
+    .footer-container {
+        display: block;
+        text-align: center;
+        padding: 20px 4%;
+    }
+
+    .footer-left h1 {
+        font-size: 1.8rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer-right p {
+        margin: 20px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+    }
+
+    .footer-bottom ul li {
+        margin: 10px 0;
+    }
+    
+    .wrapper .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .wrapper {
+        padding-top: 20px;
+    }
+
 }
 
 @media (min-width: 680px) {
