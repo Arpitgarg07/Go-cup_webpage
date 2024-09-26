@@ -11,7 +11,7 @@
         <img src="img/logo.png" alt="logo-company">
         <div class="nav-elements">
             <div class="txt-nav">
-                <h4><a class="nav-link" href="">Home</a></h4>
+                <h4><a class="nav-link" id="home-link" href="">Home</a></h4>
                 <h4><a class="nav-link" href="">About</a></h4>
                 <h4><a class="nav-link" href="">Services</a></h4>
                 <h4><a class="nav-link" href="index.html">Contact</a></h4>
@@ -163,6 +163,16 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script >
+
+        // Get the "Home" link by its ID or class
+        document.getElementById("home-link").addEventListener("click", function(event) {
+        // Prevent the default anchor link behavior
+        event.preventDefault();
+        
+            // Redirect to the outer-located index.html
+            window.location.href = "../index.html"; // Adjust the path as needed
+        });
+
         function sendEmail(){
             Email.send({
                 Host : "smtp.elasticemail.com",
