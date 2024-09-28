@@ -1,6 +1,6 @@
-# Gocup - Brand your company on every Sip
+# Everysip - Brand your company on every Sip
 
-**Gocup** is an innovative advertising platform that allows businesses to promote their brands on paper cups. Our goal is to provide high-visibility, eco-friendly advertising by partnering with cup manufacturers and offering seamless, custom cup branding services for businesses of all sizes.
+**Everysip** is an innovative advertising platform that allows businesses to promote their brands on paper cups. Our goal is to provide high-visibility, eco-friendly advertising by partnering with cup manufacturers and offering seamless, custom cup branding services for businesses of all sizes.
 
 ## Features
 
