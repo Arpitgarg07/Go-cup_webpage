@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everysip</title><link rel="icon" type="image/x-icon" href="/images/favicon_io (1)/favicon.ico">
-    <link rel="stylesheet" href="preloader/loader.css">
+    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+  <div id="preloader" class="main-page-loader">
+    <div class="loader">
+        <img src="images/loader img/1.png" alt="Loader Image 1">
+        <img src="images/loader img/2.png" alt="Loader Image 2">
+        <img src="images/loader img/3.png" alt="Loader Image 3">
+        <img src="images/loader img/4.png" alt="Loader Image 4">
+        <img src="images/loader img/5.png" alt="Loader Image 5">
+        <img src="images/loader img/6.png" alt="Loader Image 6">
+        <img src="images/loader img/7.png" alt="Loader Image 7">
+        <img src="images/loader img/8.png" alt="Loader Image 8">
+        <img src="images/loader img/9.png" alt="Loader Image 9">
+        <img src="images/loader img/10.png" alt="Loader Image 10">
+    </div>
+</div>
+
     <div id="content" style="display: none;"></div>
     <div id="main">
         <div class="page1">
@@ -217,5 +232,16 @@
         </div>
     </footer>
     <script src="script/script.js"></script>
+    <script src="script/loader.js"></script>
+    
+    <!-- Additional Script to Hide Preloader on Page Load -->
+    <script>
+      window.addEventListener('load', function() {
+          // Hide the preloader
+          document.getElementById('preloader').style.display = 'none';
+          // Show the main content
+          document.getElementById('content').style.display = 'block';
+      });
+  </script>
 </body>
 </html>

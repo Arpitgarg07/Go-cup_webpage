@@ -12,7 +12,6 @@ html, body {
     width: 100%;
     overflow-x: hidden;
 }
-
 #main {
     background-color: #ffffff;
     position: relative;
@@ -41,7 +40,7 @@ nav {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
 }
 
 nav img {
