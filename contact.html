@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <nav>
-        <img src="img/logo.png" alt="logo-company">
+        <img src="images/logo.png" alt="logo-company">
         <div class="nav-elements">
             <div class="txt-nav">
-                <h4><a class="nav-link" id="home-link" href="">Home</a></h4>
-                <h4><a class="nav-link" href="">About</a></h4>
-                <h4><a class="nav-link" href="">Services</a></h4>
-                <h4><a class="nav-link" href="index.html">Contact</a></h4>
-            </div>
-            <div class="but-get">
-                <h4>Get in Touch</h4>
+                <h4><a class="nav-link" href="index.html">Home</a></h4>
+                <h4><a class="nav-link" href="faq.html">FAQs</a></h4>
             </div>
         </div>
         <div class="menu-nav">
@@ -37,17 +32,17 @@
                     <h2>Contact Info</h2>
                     <ul class="info">
                         <li>
-                            <span><img src="img/location.png" alt=""></span>
+                            <span><img src="images/location.png" alt=""></span>
                             <span>
                                 Sitapura, Jaipur, Rajasthan, 302022
                             </span>
                         </li>
                         <li>
-                            <span><img src="img/mail.png" alt=""></span>
+                            <span><img src="images/mail.png" alt=""></span>
                             <span>Everysip00@gmail.com</span>
                         </li>
                         <li>
-                            <span><img src="img/call.png" alt=""></span>
+                            <span><img src="images/call.png" alt=""></span>
                             <span>8209132917, 6377181470</span>
                         </li>
                     </ul>
@@ -151,10 +146,9 @@
         </div>
         <div class="footer-bottom">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <p>	&#169; Copyright 2024</p>
         </div>
@@ -163,16 +157,6 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script >
-
-        // Get the "Home" link by its ID or class
-        document.getElementById("home-link").addEventListener("click", function(event) {
-        // Prevent the default anchor link behavior
-        event.preventDefault();
-        
-            // Redirect to the outer-located index.html
-            window.location.href = "../index.html"; // Adjust the path as needed
-        });
-
         function sendEmail(){
             Email.send({
                 Host : "smtp.elasticemail.com",
