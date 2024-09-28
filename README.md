@@ -24,7 +24,7 @@
 
 Here are some related projects
 
-[About Project](https://github.com/Arpitgarg07/Go-cup_webpage)
+[About Project](https://github.com/Arpitgarg07/Everysip)
 
 
 
