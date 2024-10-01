@@ -31,11 +31,11 @@ html, body {
 
 nav {
     background-color: #ffffff;
-    padding: 1vw 8vw;
+    padding: 1.2vw 6vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -44,7 +44,7 @@ nav {
 }
 
 nav img {
-    height: 48px;
+    height: 38px;
     padding: 0;
 }
 
@@ -109,7 +109,6 @@ nav img {
     z-index: 9;
 }
 .mid {
-    padding-top: 5.4vw;
     padding-bottom: 2vw;
     width: 100%; /* Full width of the page */
     display: flex;

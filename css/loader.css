@@ -12,7 +12,7 @@
     justify-content: center; 
     align-items: center; 
     background-color: #f4f4f4; /* Background color for loader */
-    position: fixed;  /* Fixes the loader to the viewport */
+    position: sticky;  /* Fixes the loader to the viewport */
     top: 0;           /* Positions it at the top */
     left: 0;          /* Positions it at the left */
     z-index: 1000;   /* Ensures it is above all other content */
